@@ -13,7 +13,7 @@ public class Test_StrToTime {
 
     @BeforeAll
     public static void setTimeZone() {
-        TimeZone zone = TimeZone.getTimeZone("Asia/Shanghai"); 
+        TimeZone zone = TimeZone.getTimeZone("Asia/Shanghai");
         TimeZone.setDefault(zone);
     }
 
