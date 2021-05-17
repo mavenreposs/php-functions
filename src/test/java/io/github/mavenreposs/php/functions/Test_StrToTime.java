@@ -3,11 +3,19 @@ package io.github.mavenreposs.php.functions;
 import io.github.mavenreposs.php.functions.strtotime.DateFormatter;
 import io.github.mavenreposs.php.functions.strtotime.StrToTime;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
+import java.util.TimeZone;
 
 public class Test_StrToTime {
+
+    @BeforeEach
+    public void setTimeZone() {
+        TimeZone zone = TimeZone.getTimeZone("Asia/Shanghai");
+        TimeZone.setDefault(zone);
+    }
 
     // 1621222199 (2021-05-17 11:29:59)
     private static final int nowTime = 1621222199;
