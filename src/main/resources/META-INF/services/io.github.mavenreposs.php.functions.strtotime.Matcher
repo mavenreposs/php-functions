@@ -1,0 +1,11 @@
+io.github.mavenreposs.php.functions.strtotime.matcher.NowMatcher
+io.github.mavenreposs.php.functions.strtotime.matcher.TomorrowMatcher
+io.github.mavenreposs.php.functions.strtotime.matcher.YesterdayMatcher
+io.github.mavenreposs.php.functions.strtotime.matcher.NDaysMatcher
+io.github.mavenreposs.php.functions.strtotime.matcher.NWeeksMatcher
+io.github.mavenreposs.php.functions.strtotime.matcher.NMonthMatcher
+io.github.mavenreposs.php.functions.strtotime.matcher.NextMonthMatcher
+io.github.mavenreposs.php.functions.strtotime.matcher.FirstDayOfNextMonthMatcher
+io.github.mavenreposs.php.functions.strtotime.matcher.FirstDayOfNMonthMatcher
+io.github.mavenreposs.php.functions.strtotime.matcher.NYearMatcher
+io.github.mavenreposs.php.functions.strtotime.matcher.DateFormatPatternMatcher
