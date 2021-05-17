@@ -3,7 +3,7 @@ package io.github.mavenreposs.php.functions;
 import io.github.mavenreposs.php.functions.strtotime.DateFormatter;
 import io.github.mavenreposs.php.functions.strtotime.StrToTime;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
@@ -11,9 +11,9 @@ import java.util.TimeZone;
 
 public class Test_StrToTime {
 
-    @BeforeEach
-    public void setTimeZone() {
-        TimeZone zone = TimeZone.getTimeZone("Asia/Shanghai");
+    @BeforeAll
+    public static void setTimeZone() {
+        TimeZone zone = TimeZone.getTimeZone("Asia/Shanghai"); 
         TimeZone.setDefault(zone);
     }
 
