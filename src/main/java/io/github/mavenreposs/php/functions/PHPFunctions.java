@@ -12,52 +12,53 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
+@SuppressWarnings("unused")
 public class PHPFunctions {
 
     private PHPFunctions() {
     }
 
     /**
-     * @param separator
-     * @param string
-     * @return
+     * @param separator 分割符
+     * @param string 输入字符串
+     * @return 分割后数组
      */
     public static String[] explode(String separator, String string) {
         return StringUtils.splitByWholeSeparatorPreserveAllTokens(string, separator);
     }
 
     /**
-     * @param separator
-     * @param string
-     * @param limit
-     * @return
+     * @param separator 分割符
+     * @param string 输入字符串
+     * @param limit 限制大小
+     * @return 分割后数组
      */
     public static String[] explode(String separator, String string, int limit) {
         return StringUtils.splitByWholeSeparatorPreserveAllTokens(string, separator, limit);
     }
 
     /**
-     * @param separator
-     * @param values
-     * @return
+     * @param separator 分割符
+     * @param values 合并数组
+     * @return 字符串
      */
     public static String implode(String separator, String[] values) {
         return StringUtils.join(values, separator);
     }
 
     /**
-     * @param haystack
-     * @param needle
-     * @return
+     * @param haystack 字符串
+     * @param needle 字符串
+     * @return int
      */
     public static int strrpos(String haystack, String needle) {
         return StringUtils.lastIndexOfAny(haystack, needle);
     }
 
     /**
-     * @param haystack
-     * @param needle
-     * @return
+     * @param haystack 字符串
+     * @param needle 字符串
+     * @return int
      */
     public static int strpos(String haystack, String needle) {
         return StringUtils.indexOfAny(haystack, needle);
@@ -66,7 +67,7 @@ public class PHPFunctions {
     /**
      * 返回字符串的子串
      *
-     * @return
+     * @return String
      */
     public static String substr(String string, int start, int length) {
         return "";
@@ -93,40 +94,40 @@ public class PHPFunctions {
     }
 
     /**
-     * @param string
-     * @return
+     * @param string 字符串
+     * @return 字符串
      */
     public static String trim(String string) {
         return StringUtils.trim(string);
     }
 
     /**
-     * @param string
-     * @return
+     * @param string 字符串
+     * @return 字符串
      */
     public static String ltrim(String string) {
         return StringUtils.stripStart(string, null);
     }
 
     /**
-     * @param string
-     * @return
+     * @param string 字符串
+     * @return 字符串
      */
     public static String ltrim(String string, final String stripChars) {
         return StringUtils.stripStart(string, stripChars);
     }
 
     /**
-     * @param string
-     * @return
+     * @param string 字符串
+     * @return 字符串
      */
     public static String rtrim(String string) {
         return StringUtils.stripEnd(string, null);
     }
 
     /**
-     * @param string
-     * @return
+     * @param string 字符串
+     * @return 字符串
      */
     public static String rtrim(String string, final String stripChars) {
         return StringUtils.stripEnd(string, stripChars);
