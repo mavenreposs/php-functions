@@ -6,11 +6,11 @@
 
     <groupId>io.github.mavenreposs</groupId>
     <artifactId>php-functions</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
 
     <name>php-functions</name>
     <url>https://github.com/mavenreposs/php-functions</url>
-    <description>A error component</description>
+    <description>php functions for java implement.</description>
     <scm>
         <url>https://github.com/mavenreposs/php-functions</url>
         <connection>https://github.com/mavenreposs/php-functions.git</connection>
@@ -132,7 +132,7 @@
                         <extensions>true</extensions>
                         <configuration>
                             <serverId>oss</serverId>
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
                     </plugin>
