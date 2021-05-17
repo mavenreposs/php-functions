@@ -66,7 +66,9 @@ public class PHPFunctions {
 
     /**
      * 返回字符串的子串
-     *
+     * @param string 截取字符串
+     * @param start 开始位置
+     * @param length 截取长度
      * @return String
      */
     public static String substr(String string, int start, int length) {
@@ -111,6 +113,7 @@ public class PHPFunctions {
 
     /**
      * @param string 字符串
+     * @param stripChars 字符串
      * @return 字符串
      */
     public static String ltrim(String string, final String stripChars) {
@@ -127,6 +130,7 @@ public class PHPFunctions {
 
     /**
      * @param string 字符串
+     * @param stripChars 字符串
      * @return 字符串
      */
     public static String rtrim(String string, final String stripChars) {
@@ -195,7 +199,7 @@ public class PHPFunctions {
 
     /**
      * 获得JAVA的DATE时间转的时间戳
-     *
+     * @param date 指定日期
      * @return 10位时间戳
      */
     public static int time(Date date) {
@@ -470,6 +474,7 @@ public class PHPFunctions {
      * 用于将字符串转换为小写
      *
      * @param value 输入字符串
+     * @return String
      */
     public static String strtolower(String value) {
         return StringUtils.toRootLowerCase(value);
@@ -480,6 +485,7 @@ public class PHPFunctions {
      * 用于将指定字符串转换为大写
      *
      * @param value 输入字符串
+     * @return String
      */
     public static String strtoupper(String value) {
         return StringUtils.toRootUpperCase(value);
