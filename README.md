@@ -5,6 +5,18 @@
 参考地址：
 https://www.php.net/manual/zh/function.strtotime.php
 
+### Maven
+```text
+<!-- https://mvnrepository.com/artifact/io.github.mavenreposs/php-functions -->
+<dependency>
+    <groupId>io.github.mavenreposs</groupId>
+    <artifactId>php-functions</artifactId>
+    <version>1.0</version>
+</dependency>
+```
+
+### Examples
+
 ```java
 Date date = StrToTime.strtotime("2008/06/30");
 Assertions.assertEquals(date.toString(), "Mon Jun 30 00:00:00 CST 2008");
