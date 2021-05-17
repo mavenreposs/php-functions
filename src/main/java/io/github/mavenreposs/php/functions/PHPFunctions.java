@@ -329,7 +329,7 @@ public class PHPFunctions {
 
     /**
      * 返回一个根据 timestamp 得出的包含有日期信息的关联数组 array。如果没有给出时间戳则认为是当前本地时间。
-     *
+     * @param date Date
      * @return String[]
      */
     public static GetDate getdate(Date date) {

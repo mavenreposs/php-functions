@@ -5,6 +5,11 @@ import java.util.TimeZone;
 
 public class GMTDate {
 
+    /**
+     * 转换时间到GMT时区
+     * @param date Date
+     * @return Date
+     */
     public static Date convertToGmt(Date date) {
         TimeZone tz = TimeZone.getDefault();
         Date ret = new Date(date.getTime() - tz.getRawOffset());
@@ -22,6 +27,11 @@ public class GMTDate {
         return ret;
     }
 
+    /**
+     * 转换时间来自GMT时区
+     * @param date Date
+     * @return Date
+     */
     public static Date convertFromGmt(Date date) {
         TimeZone tz = TimeZone.getDefault();
         Date ret = new Date(date.getTime() + tz.getRawOffset());
