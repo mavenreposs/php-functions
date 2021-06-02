@@ -1,8 +1,14 @@
 package io.github.mavenreposs.php.functions;
 
+import io.github.mavenreposs.php.functions.utils.Md5CaculateUtil;
+import io.github.mavenreposs.php.functions.utils.Sha1CaculateUtil;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
@@ -83,6 +89,16 @@ public class PHPFunctions {
      */
     public static String ucwords(String string) {
         return string.substring(0, 1).toUpperCase() + string.substring(1);
+    }
+
+    /**
+     * 将首字母转换成大小字母
+     *
+     * @param string 输入的字符串。
+     * @return 字符串
+     */
+    public static String ucfirst(String string) {
+        return ucwords(string);
     }
 
     /**
@@ -490,6 +506,81 @@ public class PHPFunctions {
     public static String strtoupper(String value) {
         return StringUtils.toRootUpperCase(value);
     }
+
+    /**
+     * 计算字符串的 MD5 散列值
+     * @param string 要计算的字符串。
+     * @return MD5 散列值
+     */
+    public static String md5(String string) {
+        return Md5CaculateUtil.MD5(string);
+    }
+
+    /**
+     * 计算字符串的 sha1 散列值
+     * @param string 要计算的字符串。
+     * @return sha1 散列值
+     */
+    public static String sha1(String string) {
+        return Sha1CaculateUtil.sha1(string);
+    }
+
+    /**
+     * 计算字符串的 MD5 散列值
+     * @param inputStream 要计算的文件输入流。
+     * @return MD5 散列值
+     */
+    public static String md5_file(InputStream inputStream) {
+        return Md5CaculateUtil.getFileMD5(inputStream);
+    }
+
+    /**
+     * 计算字符串的 MD5 散列值
+     * @param fileInputStream 要计算的文件输入流。
+     * @return MD5 散列值
+     */
+    public static String md5_file(FileInputStream fileInputStream) {
+        return Md5CaculateUtil.getFileMD5(fileInputStream);
+    }
+
+    /**
+     * 计算字符串的 MD5 散列值
+     * @param file 要计算的文件。
+     * @return MD5 散列值
+     */
+    public static String md5_file(File file) throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(file);
+        return Md5CaculateUtil.getFileMD5(fileInputStream);
+    }
+
+    /**
+     * 计算字符串的 MD5 散列值
+     * @param inputStream 要计算的文件输入流。
+     * @return MD5 散列值
+     */
+    public static String sha1_file(InputStream inputStream) {
+        return Sha1CaculateUtil.getFileSha1(inputStream);
+    }
+
+    /**
+     * 计算字符串的 MD5 散列值
+     * @param fileInputStream 要计算的文件输入流。
+     * @return MD5 散列值
+     */
+    public static String sha1_file(FileInputStream fileInputStream) {
+        return Sha1CaculateUtil.getFileSha1(fileInputStream);
+    }
+
+    /**
+     * 计算字符串的 MD5 散列值
+     * @param file 要计算的文件。
+     * @return MD5 散列值
+     */
+    public static String sha1_file(File file) throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(file);
+        return Sha1CaculateUtil.getFileSha1(fileInputStream);
+    }
+
 
     /**
      * 返回星期几
