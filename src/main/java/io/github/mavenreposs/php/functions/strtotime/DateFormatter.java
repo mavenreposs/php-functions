@@ -9,6 +9,9 @@ public enum DateFormatter {
     FourDigitYearMonthDayWithSpaces("yyyy MM dd"), // Four digit year, month and day with spaces
     FourDigitMonthDayYearWithSlashes("MM/dd/yyyy"), // Four digit year, month and day with slashes
 
+    MonthDayWithSlashes("MM/dd"), // Four digit year, month and day with slashes
+    MonthDayWithDashes("MM-dd"), // Two digit year, month and day with dashes
+    
     TwoDigitYearMonthDayWithDashes("yy-MM-dd"), // Two digit year, month and day with dashes
     FourDigitYearMonthDayWithDashes("yyyy-MM-dd"), // Two digit year, month and day with dashes
     FourDigitYearMonthDayWithDashesTimeNotSecond("yyyy-MM-dd HH:mm"), // Two digit year, month and day with dashes
